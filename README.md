@@ -27,6 +27,8 @@ While flink job stops or fails, `HistoryServerArchivist` will send request to Fl
 the data will stored as json values in different keys, such as exceptions, the structure of json values is defined by `ArchivedJson`.
 > http://hostname:port/jobs/7684be6004e4e955c2a558a9bc463f65/exceptions.
 
+[Concept of ArchiveJson](./Concept-of-ArchivedJson.md)
+
 ## Idea
 The data of taskmanagers of each vertex are stored in keys such as : 
 * `/jobs/<jobid>/vertices/<vertexid>/taskmanagers`
@@ -44,6 +46,7 @@ The file name will be `<jobid>`
 ## Flink SQL solution:
 I found a modern way to implement, that is pure flink sql to do all the things.
 
+[Flink SQL solution](./flink-sql-solution.md)
 
 
 
