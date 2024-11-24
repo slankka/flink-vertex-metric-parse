@@ -130,7 +130,7 @@ COALESCE(JSON_QUERY(t.json, 'lax $.taskmanagers[*]["duration"]' ), '[]')  as dur
 COALESCE(JSON_QUERY(t.json, 'lax $.taskmanagers[*]["taskmanager-id"]'), '[]') as taskManagerId,
 CONCAT('application', REGEXP_EXTRACT(JSON_VALUE(t.json, '$.taskmanagers[0]["taskmanager-id"]'), 'container_\w+(_\d+_\d+)_\d+_\d+', 1)) as appid
 from archived_logs CROSS JOIN UNNEST(archived_logs.archive) as t(path, json)  where t.path like '%taskmanagers'
-) q
+) q where q.vertexId is not null
 
 ```
 
