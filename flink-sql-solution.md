@@ -149,8 +149,10 @@ To generate a full url points to taskmanager log:
 
 **INPUT**
 * yarn job history serivce link prefix: `http://hist.yarn.slankka.com:19888/jobhistory/logs/`
-* the job creator username: `slankka`: unfortunately flink archived log does not provide, and Flink filesystem connector doesn't support user group information metadata yet. Maybe another information needed.
+* the job creator username: `slankka`
 * the container hosts suffix: `.yarn.slankka.com`
+
+*unfortunately neigher flink archived log provides job creator username, nor Flink filesystem connector supports user group information metadata at this moment.*
 
 **OUTPUT**
 ```
