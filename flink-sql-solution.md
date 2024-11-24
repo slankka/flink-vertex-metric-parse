@@ -137,22 +137,27 @@ from archived_logs CROSS JOIN UNNEST(archived_logs.archive) as t(path, json)  wh
 Because of the complexity of the json structure, I only extract taskmanager properties as json array string.
 Less work left to convert array to data rows again. I haven't found simple way to unnest the data.
 
-## Processing the data
+## How to execute Flink SQL
+Flink SQL client, Flink Table API, Cloud Infrastructure interface.
+
+## How to use the data
+
+for example:
 **Taskmanager log**
 
-To generate a full taskmanager log:
+To generate a full url points to taskmanager log:
 
+**INPUT**
 * yarn job history serivce link prefix: `http://hist.yarn.slankka.com:19888/jobhistory/logs/`
 * the job creator username: `slankka`: unfortunately flink archived log does not provide, and Flink filesystem connector doesn't support user group information metadata yet. Maybe another information needed.
 * the container hosts suffix: `.yarn.slankka.com`
 
-The full log link example:
+**OUTPUT**
 ```
 http://hist.yarn.slankka.com:19888/jobhistory/logs/kkan129131.yarn.slankka.com:46379/container_e87_1724243239726_1412_01_000002/container_e87_1724243239726_1412_01_000002/slankka
 ```
 
-## How to use
-Flink SQL client, Flink Table API, Cloud Infrastructure interface.
+
 
 
 
