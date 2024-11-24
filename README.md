@@ -4,7 +4,7 @@ A solution to parse flink vertices metrics from archived logs, to help implement
 🚀**Advantages**
 * **Independent**: Flink History Server independent, can be executed offline or long running streaming style.
 * **Flink Way to process Flink data**: Powered by Flink SQL, to produce many useful information for flink users.
-* **Easy to deploy**: The information is enough already, computing progress does not require any database record support except Yarn REST service.
+* **Easy to deploy**: The information is enough already, computing progress does not require any pre-collected records.
 * **HistoryServer Mate**:  Provide log links data to log browsing lambda service serving to Flink History Server UI.
 
 ## Log browsing service
