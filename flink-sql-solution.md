@@ -155,8 +155,84 @@ To generate a full url points to taskmanager log:
 *unfortunately neigher flink archived log provides job creator username, nor Flink filesystem connector supports user group information metadata at this moment.*
 
 **OUTPUT**
+
 ```
 http://hist.yarn.slankka.com:19888/jobhistory/logs/kkan129131.yarn.slankka.com:46379/container_e87_1724243239726_1412_01_000002/container_e87_1724243239726_1412_01_000002/slankka
+```
+Go to this Hadoop Yarn jobhistory page, there will be container logs summary:
+
+```
+Log Type: directory.info
+Log Upload Time: Thu Nov 14 05:05:06 +0800 2024
+Log Length: 6563
+
+Showing 4096 bytes of 6563 total. Click <here> for the full log.
+
+---
+
+Log Type: launch_container.sh
+
+Log Upload Time: Thu Nov 14 05:05:06 +0800 2024
+
+Log Length: 15227
+
+Showing 4096 bytes of 15227 total. Click <here> for the full log.
+
+---
+
+Log Type: prelaunch.err
+
+Log Upload Time: Thu Nov 14 05:05:06 +0800 2024
+
+Log Length: 0
+
+---
+
+Log Type: prelaunch.out
+
+Log Upload Time: Thu Nov 14 05:05:06 +0800 2024
+
+Log Length: 100
+
+---
+
+Log Type: taskmanager.err
+
+Log Upload Time: Thu Nov 14 05:05:06 +0800 2024
+
+Log Length: 2546
+
+---
+
+Log Type: taskmanager.log
+
+Log Upload Time: Thu Nov 14 05:05:06 +0800 2024
+
+Log Length: 2101645
+
+Showing 4096 bytes of 2101645 total. Click <here> for the full log.
+
+---
+
+Log Type: taskmanager.out
+
+Log Upload Time: Thu Nov 14 05:05:06 +0800 2024
+
+Log Length: 0
+
+---
+
+Log Type: container-localizer-syslog
+
+Log Upload Time: Thu Nov 14 05:05:06 +0800 2024
+
+Log Length: 0
+
+```
+
+And, If the pages are provided by Knox Gateway, one of the taskmanager.log link may be
+```
+http:/knox-gateway.slankka.com:8443/gateway/jobhistory/joblogs/kkan129131.yarn.slankka.com:46379/container_e87_1724243239726_1412_01_000002/container_e87_1724243239726_1412_01_000002/slankka/taskmanager.log/?start=0&start.time=0&end.time=xxxxxxxxxxxxx&someKnoxParam=someKnoxValue
 ```
 
 
