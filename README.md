@@ -1,4 +1,4 @@
-# flink-vertex-metric-parse
+# How to parse Flink HistoryServer archived logs
 A solution to parse flink vertices metrics from archived logs, to help implement a simplest log browsing service without historyserver.
 
 🚀**Advantages**
